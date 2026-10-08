@@ -1,0 +1,35 @@
+{
+    "id": 1,
+    "mssv": "2412111035",
+    "ho_ten": "Dao Vu Hoang Anh",
+    "lop": "CNTT-K65",
+    "diem": 9.5
+  },
+  {
+    "id": 2,
+    "mssv": "2412111036",
+    "ho_ten": "Nguyen Van A",
+    "lop": "CNTT-K65",
+    "diem": 8.0
+  },
+  {
+    "id": 3,
+    "mssv": "2412111037",
+    "ho_ten": "Tran Thi B",
+    "lop": "KHMT-K65",
+    "diem": 8.5
+  },
+  {
+    "id": 4,
+    "mssv": "2412111038",
+    "ho_ten": "Le Van C",
+    "lop": "ATTT-K65",
+    "diem": 7.0
+  },
+  {
+    "id": 5,
+    "mssv": "2412111039",
+    "ho_ten": "Pham Thi D",
+    "lop": "CNTT-K65",
+    "diem": 9.0
+  }
