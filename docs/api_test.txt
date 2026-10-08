@@ -1,0 +1,41 @@
+=== TEST 1: POST thieu truong (HTTP 400) ===
+Command: curl -i -X POST http://localhost:5000/api/students -H 'Content-Type: application/json' -d '{"mssv":"2412111040","ho_ten":"Test User"}'
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 82
+ETag: W/"52-XJUInzmfPFUK1ZFLeqO3Nhe+vnk"
+Date: Thu, 08 Oct 2026 03:19:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Thiếu trường dữ liệu bắt buộc (mssv, ho_ten, lop, diem)"}
+
+
+=== TEST 2: POST diem > 10 (HTTP 400) ===
+Command: curl -i -X POST http://localhost:5000/api/students -H 'Content-Type: application/json' -d '{"mssv":"2412111040","ho_ten":"Test User","lop":"CNTT-K65","diem":11}'
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 66
+ETag: W/"42-GHMkbiGX+y7qfHkUewdEJ5w+YBk"
+Date: Thu, 08 Oct 2026 03:19:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Điểm phải nằm trong khoảng từ 0 đến 10"}
+
+
+=== TEST 3: POST hop le (HTTP 201) ===
+Command: curl -i -X POST http://localhost:5000/api/students -H 'Content-Type: application/json' -d '{"mssv":"2412111040","ho_ten":"Tran Van E","lop":"CNTT-K65","diem":8.5}'
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-QmzLpKPGCBzCm4+IZksm8xm5RKc"
+Date: Thu, 08 Oct 2026 03:19:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":6,"mssv":"2412111040","ho_ten":"Tran Van E","lop":"CNTT-K65","diem":8.5}
+
