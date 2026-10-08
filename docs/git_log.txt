@@ -1,0 +1,6 @@
+*   8f8acbb fix(merge): resolve README merge conflict
+|\  
+| * 5805470 docs: update README title on develop
+* | 67e6c5f docs: update README title on main
+|/  
+* efd4839 chore: init project
